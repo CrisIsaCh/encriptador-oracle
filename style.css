@@ -1,0 +1,133 @@
+@font-face {
+    font-family:"Montserrat";
+    src: url('../fonts/Montserrat.ttf');
+}
+* {
+    margin: 0%;
+    padding: 0%;
+
+    font-family: 'Montserrat';
+   
+}
+
+header {
+
+    height:15vh;
+    background-color: #1b1b1b;
+}
+
+header img {
+    height: 8vh;
+    position: absolute;
+    top: 3.5vh;
+}
+
+main {
+    box-sizing: border-box;
+    background-color: #019e97;
+    display: flex;   
+    justify-content: center; 
+    padding: 5vh 15vw;
+
+}
+
+.contenedor {
+    display: flex;    
+    gap :3vw;
+}
+
+.section1 textarea {
+    
+    background-color: #017e79;
+    color: aliceblue;
+    font-size: 2vw;
+    padding: 1.5vw;
+    font-weight: bold;
+
+    width: 42.5vw;
+    height: 55vh;
+}
+.section1 textarea::placeholder{
+    color: aliceblue;
+
+}
+
+#advertencia {
+    display: flex;
+    align-items: center;
+    gap: 0.8vw;
+}
+#advertencia img {
+    height: 2.5vh;
+    background-color: #ffffff;
+    border-radius: 51%;
+}
+#advertencia span{
+    color: #ffffff;
+}
+ 
+
+.section2 {
+    background-color: #ffffff;
+    width: 42.5vw;
+    height: 75vh;
+    border-radius: 5px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap:4vw;
+    padding: 2vh 0 0 0 ;
+}
+#botonE,#botonD,#botonC {
+    /* border: 2px solid rgb(22, 21, 21); */
+    font-size: 3vw;
+    padding: 2px 8px;
+    
+    border-radius: 6px;
+    color: #ffffff;
+    background-color: #124b49;
+    cursor: pointer;
+}
+#section2-ihp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+    
+}
+#section2-ihp img {
+    width: 20vw;    
+    top:5vh;
+    padding-top: 6vh;
+}
+#section2-ihp h5,p{
+   
+    top: 5vh;
+    text-align: center;
+    width: 23vw;
+    
+}
+#contenedorMensajeBoton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    
+}
+#contenedorMensajeBoton p{
+    height: 53vh;
+    width: 35vw;
+    margin-top: 9vh;
+    background-color: #e8f3f3;
+    
+    
+}
+
+
+
+footer {
+    height: auto;
+    background-color: #1b1b1b;
+}
