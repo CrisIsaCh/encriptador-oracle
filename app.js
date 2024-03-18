@@ -118,7 +118,7 @@ textarea.addEventListener('keypress', (e) => {
     }
 
 
-    if (tecla === tecla.toUpperCase()) {
+    if (tecla === tecla.toUpperCase()||tecla==='á'||tecla==='é'||tecla==='í'||tecla==='ó'||tecla==='ú') {
         e.preventDefault();
     }
   
