@@ -6,9 +6,9 @@ const desencriptarB = document.getElementById("botonD");
 const desaparecer = document.getElementById("section2-ihp");
 const section2 = document.getElementById('section2');
 var textarea = document.getElementById("miTextarea");
-console.log(section2);
-console.log(desaparecer);
-console.log(encriptarB);
+// console.log(section2);
+// console.log(desaparecer);
+// console.log(encriptarB);
 
 //-------EVENTO CLICK ENCRIPTAR-------////
 encriptarB.addEventListener('click', () => {
@@ -19,7 +19,7 @@ encriptarB.addEventListener('click', () => {
         const mensaje = document.getElementById('parrafo');
         const botonCopiar = document.getElementById('botonC');
         let mensajeArray = Array.from(textarea.value.trim());
-        console.log(mensajeArray);
+        // console.log(mensajeArray);
         mensaje.textContent = encriptar(mensajeArray);
         botonCopiar.addEventListener('click', copiar)
     } catch (error) {
@@ -36,8 +36,8 @@ desencriptarB.addEventListener('click', () => {
         const mensaje = document.getElementById('parrafo');
         const botonCopiar = document.getElementById('botonC');
         let mensajeArray = Array.from(textarea.value.trim());
-        console.log(mensajeArray.length);
-        console.log(textarea.value.trim().length);
+        // console.log(mensajeArray.length);
+        // console.log(textarea.value.trim().length);
         mensaje.textContent = desencriptar(textarea.value.trim());
 
         botonCopiar.addEventListener('click', copiar);
@@ -75,9 +75,9 @@ function encriptar(array) {
         }
 
     }
-    console.log(array);
+    // console.log(array);
     let desencriptado = array.join("");
-    console.log(desencriptado);
+    // console.log(desencriptado);
     return desencriptado;
 }
 //////////////---------------FUNCION DESENCRIPTAR---------//////
@@ -100,7 +100,7 @@ function desencriptar(array) {
 }
 //////-------------VALIDACIONES-------////////
 function validaciones() {
-    console.log("entree");
+    // console.log("entree");
 
     if (textarea.value.trim() == "") {
         throw "¡Debe ingresar texto!🤬"
@@ -109,7 +109,7 @@ function validaciones() {
 }
 
 textarea.addEventListener('keypress', (e) => {
-    console.log(e.key);
+    // console.log(e.key);
     let tecla = e.key;
 
       // Permitir la tecla de espacio
@@ -128,11 +128,11 @@ textarea.addEventListener('keypress', (e) => {
 ///---------------OCULTAR IMAGEN Y CREAR BOTON Y PARRAFO-//
 function preparacion() {
     section2.innerHTML = '';
-    console.log(section2);
+    // console.log(section2);
     const contenedorMB = document.createElement('div');
     contenedorMB.id = 'contenedorMensajeBoton';
 
-    console.log("encriptar");
+    // console.log("encriptar");
     desaparecer.style.display = "none";
     const mensaje = document.createElement('p');
     mensaje.id = "parrafo";
@@ -144,19 +144,16 @@ function preparacion() {
     contenedorMB.append(botonCopiar);
     section2.append(contenedorMB);
 
-    console.log(textarea.value);
+    // console.log(textarea.value);
 
-    // let mensajeArray = Array.from(textarea.value.trim());
-    // console.log(mensajeArray);
-    // mensaje.textContent = encriptar(mensajeArray);
-    // botonCopiar.addEventListener('click',copiar)
+    
 
 }
 ///////--------------COPIAR----///////////
 
 function copiar() {
     let mensaje = document.getElementById("parrafo")
-    console.log(mensaje.textContent);
+    // console.log(mensaje.textContent);
     navigator.clipboard.writeText(mensaje.textContent); // Intenta escribir el texto en el portapapeles
     alert("¡Texto copiado! 😁😀🎊🎉✨");
 
