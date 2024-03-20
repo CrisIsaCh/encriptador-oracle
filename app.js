@@ -23,12 +23,33 @@ encriptarB.addEventListener('click', () => {
         mensaje.textContent = encriptar(mensajeArray);
         botonCopiar.addEventListener('click', copiar)
     } catch (error) {
-        alert(error);
+        // alert(error);
+        toastr["warning"]("¡Debe ingresar texto!🤬", "¡Cuidado!")
+
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": true,
+            "progressBar": true,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": true,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
 
     }
 });
 //--------------EVENTO CLICK DESENCRIPTAR----/
 desencriptarB.addEventListener('click', () => {
+
+
     try {
         validaciones();
         preparacion();
@@ -44,7 +65,27 @@ desencriptarB.addEventListener('click', () => {
 
 
     } catch (error) {
-        alert(error);
+        // alert(error);
+        toastr["warning"]("¡Debe ingresar texto!🤬", "¡Cuidado!")
+
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": true,
+            "progressBar": true,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": true,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+
     }
 
 
@@ -105,6 +146,7 @@ function validaciones() {
     if (textarea.value.trim() == "") {
         throw "¡Debe ingresar texto!🤬"
 
+
     }
 }
 
@@ -112,16 +154,16 @@ textarea.addEventListener('keypress', (e) => {
     // console.log(e.key);
     let tecla = e.key;
 
-      // Permitir la tecla de espacio
-      if (tecla === " " || tecla === "Spacebar") {
+    // Permitir la tecla de espacio
+    if (tecla === " " || tecla === "Spacebar") {
         return; // Permitir la pulsación de tecla de espacio
     }
 
 
-    if (tecla === tecla.toUpperCase()||tecla==='á'||tecla==='é'||tecla==='í'||tecla==='ó'||tecla==='ú') {
+    if (tecla === tecla.toUpperCase() || tecla === 'á' || tecla === 'é' || tecla === 'í' || tecla === 'ó' || tecla === 'ú') {
         e.preventDefault();
     }
-  
+
 
 })
 
@@ -146,7 +188,7 @@ function preparacion() {
 
     // console.log(textarea.value);
 
-    
+
 
 }
 ///////--------------COPIAR----///////////
@@ -155,6 +197,25 @@ function copiar() {
     let mensaje = document.getElementById("parrafo")
     // console.log(mensaje.textContent);
     navigator.clipboard.writeText(mensaje.textContent); // Intenta escribir el texto en el portapapeles
-    alert("¡Texto copiado! 😁😀🎊🎉✨");
+    // alert("¡Texto copiado! 😁😀🎊🎉✨");
+    toastr["success"]("😁😀🎊🎉✨😝", "¡Texto copiado!")
+
+toastr.options = {
+  "closeButton": true,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": true,
+  "positionClass": "toast-top-right",
+  "preventDuplicates": true,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
 
 }
