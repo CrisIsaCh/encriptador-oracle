@@ -7,8 +7,9 @@
     padding: 0%;
 
     font-family: 'Montserrat';
-   
+
 }
+
 
 header {
 
@@ -25,22 +26,23 @@ header img {
 main {
     box-sizing: border-box;
     background-color: #019e97;
-    display: flex;   
-    justify-content: center; 
+    display: flex;
+    justify-content: center;
     padding: 5vh 15vw;
 
 }
 
 .contenedor {
-    display: flex;    
+    display: flex;
     gap :3vw;
 }
 
+
 .section1 textarea {
-    
+
     background-color: #017e79;
     color: aliceblue;
-    font-size: 2vw;
+    font-size: 2.5vw;
     padding: 1.5vw;
     font-weight: bold;
 
@@ -65,14 +67,9 @@ main {
 #advertencia span{
     color: #ffffff;
 }
- 
 
-.section2 {
-    background-color: #ffffff;
-    width: 42.5vw;
-    height: 75vh;
-    border-radius: 5px;
-}
+
+
 
 .botones {
     display: flex;
@@ -84,56 +81,202 @@ main {
     /* border: 2px solid rgb(22, 21, 21); */
     font-size: 3vw;
     padding: 2px 8px;
-    
+    font-weight: bold;
+
     border-radius: 6px;
     color: #ffffff;
     background-color: #124b49;
     cursor: pointer;
+}
+.section2 {
+    background-color: #ffffff;
+    width: 42.5vw;
+
+    border-radius: 5px;
 }
 #section2-ihp{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3vh;
-    
+
 }
 #section2-ihp img {
-    width: 20vw;    
+    width: 40vh;
     top:5vh;
     padding-top: 6vh;
 }
 #section2-ihp h5,p{
-   
+
     top: 5vh;
     text-align: center;
     width: 23vw;
-    
+
+}
+#section2-ihp h5{
+
+    font-size:3.5vh;
+
+}
+#section2-ihp p{
+
+    font-size: 2.5vh;
+
 }
 #contenedorMensajeBoton{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2vh;
-    
+
 }
 #contenedorMensajeBoton p{
     height: 53vh;
     width: 35vw;
     margin-top: 9vh;
     background-color: #e8f3f3;
-    
-    
+
+
 }
 
 
 
 footer {
-    height:5vh;
-    
+    display: flex;
+    align-items: center;
+
     background-color: #1b1b1b;
 }
 footer p{
-    padding-top: 1.5vh;
+    padding: 1.3vh 0;
     color: aliceblue;
     width: 100%;
 }
+
+@media screen and (max-width:767px) {
+
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        gap :6vh;
+        align-items: center;
+    }
+    .section1 textarea {      
+        
+        font-size: 5vw;
+        padding: 1.5vw;
+        font-weight: bold;
+    
+        width: 80vw;
+        height: 35vh;
+    }
+    #botonE,#botonD,#botonC {
+
+        font-size: 6vw;
+        padding: 5px 12px;
+
+
+    }
+    .section2 {
+        
+        width: 80vw;
+        height: 35vh;
+        padding: 1.5vw;
+    
+        
+    }
+    #section2-ihp{
+       
+        gap: 1vh;
+    
+    }
+    #section2-ihp img {
+        width: 20vh;
+        
+        padding-top: 2vh;
+
+        
+    }
+    #section2-ihp h5,p{
+
+        top: 0vh;
+        
+        width:60vw;
+    
+    }
+    #section2-ihp h5{
+
+        font-size:3.2vh;
+    
+    }
+    #section2-ihp p{
+    
+        font-size:2vh;
+    
+    }
+    #contenedorMensajeBoton{
+       
+        gap: 1vh;
+    
+    }
+    #contenedorMensajeBoton p{
+        height: 27vh;
+        width: 75vw;
+        margin-top: 1vh;
+        
+    
+    
+    }
+
+}
+@media screen and (min-width:767px) and (max-width:1024px) {
+
+    header {
+
+        height:10vh;
+
+    }
+    header img {
+        height: 5vh;
+
+        top: 2.5vh;
+    }
+    
+    .section1 textarea {
+
+        font-size: 3.5vw;
+        height: 61vh;
+    }
+    #botonE,#botonD,#botonC {
+
+        font-size: 3.3vw;
+        padding: 2px 8px;
+
+
+    }
+    #section2-ihp img {
+
+
+        padding-top: 10vh;
+    }
+
+    #section2-ihp h5,p{
+
+        top: 8vh;
+
+        width: 25vw;
+
+
+    }
+    #section2-ihp h5{
+
+        font-size: 3.5vh;
+
+    }
+    #section2-ihp p{
+
+        font-size: 2.3vh;
+    }
+
+}
+
